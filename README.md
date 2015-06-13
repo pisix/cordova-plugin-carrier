@@ -16,6 +16,8 @@ cordova plugin add br.com.dtmtec.plugins.carrier
 
 On both Android and iOS, the plugin returns to the app an JSON with the following properties: carrierName, countryCode, mcc, mnc.
 
+Only on Android the plugin returns also the line number by properties lineNumber.
+
 ```
 <script>
   function alertCarrier() {
@@ -24,6 +26,8 @@ On both Android and iOS, the plugin returns to the app an JSON with the followin
      alert(data['countryCode']);
      alert(data['mcc']);
      alert(data['mnc']);
+     //only on Android
+     alert(data['lineNumber']);
    }
 
    var err = function () {
